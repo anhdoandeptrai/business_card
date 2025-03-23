@@ -1,0 +1,47 @@
+name: card_app
+description: "EZNECT - Digital Business Card"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # GetX - Quản lý trạng thái & điều hướng
+  get: ^4.6.6
+
+  # Hive - Lưu trữ dữ liệu local
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # QR Code - Tạo mã QR
+  qr_flutter: ^4.1.0
+
+  # Mở URL (Email, Phone, Website)
+  url_launcher: ^6.1.14
+
+  # Dùng để hiển thị biểu tượng
+  flutter_launcher_icons: ^0.13.1
+  shared_preferences: ^2.1.0
+  path_provider: ^2.0.14
+  screenshot: ^1.3.0
+  mobile_scanner: ^2.0.0
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo.png
+    - assets/header_background.png
+ 
