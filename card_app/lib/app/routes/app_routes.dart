@@ -7,7 +7,9 @@ abstract class AppRoutes {
   static const String otp = '/otp';
   static const String forgotPassword = '/forgot-password';
   static const String socialLogin = '/social-login';
-  static const String contactList = '/contact-list';
-  static const String enterCardCode = '/enter-card-code';
+  static const String reports = '/reports'; // Changed from contactList
+  static const String cardManager =
+      '/card-manager'; // Changed from enterCardCode
   static const String scanQRCode = '/scan-qr-code';
+  static const subscription = '/subscription'; // New route
 }

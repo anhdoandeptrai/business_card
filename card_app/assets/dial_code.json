@@ -1,0 +1,25 @@
+{
+    "countries": [
+      {"name": "Vietnam", "dial_code": "+84"},
+      {"name": "United States", "dial_code": "+1"},
+      {"name": "Canada", "dial_code": "+1"},
+      {"name": "United Kingdom", "dial_code": "+44"},
+      {"name": "Germany", "dial_code": "+49"},
+      {"name": "France", "dial_code": "+33"},
+      {"name": "Japan", "dial_code": "+81"},
+      {"name": "South Korea", "dial_code": "+82"},
+      {"name": "China", "dial_code": "+86"},
+      {"name": "India", "dial_code": "+91"},
+      {"name": "Brazil", "dial_code": "+55"},
+      {"name": "Australia", "dial_code": "+61"},
+      {"name": "Russia", "dial_code": "+7"},
+      {"name": "Mexico", "dial_code": "+52"},
+      {"name": "South Africa", "dial_code": "+27"},
+      {"name": "Italy", "dial_code": "+39"},
+      {"name": "Spain", "dial_code": "+34"},
+      {"name": "Argentina", "dial_code": "+54"},
+      {"name": "Turkey", "dial_code": "+90"},
+      {"name": "Thailand", "dial_code": "+66"}
+    ]
+  }
+  

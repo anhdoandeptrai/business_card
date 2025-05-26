@@ -6,7 +6,8 @@ class ContactButton extends StatelessWidget {
   final String url;
   final IconData icon;
 
-  const ContactButton({super.key, required this.label, required this.url, required this.icon});
+  const ContactButton(
+      {super.key, required this.label, required this.url, required this.icon});
 
   Future<void> _launchUrl() async {
     if (await canLaunchUrl(Uri.parse(url))) {

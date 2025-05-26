@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../data/models/business_card.dart';
 import '../../viewmodel/home_viewmodel.dart';
+import '../../theme/app_theme.dart'; // Thêm import này
 
 class EditCardView extends StatelessWidget {
   final BusinessCard card;
@@ -36,8 +37,11 @@ class EditCardView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Chỉnh sửa danh thiếp"),
-        backgroundColor: Colors.blue.shade600, // Màu nền AppBar
+        title: const Text(
+          "Chỉnh sửa danh thiếp",
+          style: TextStyle(color: AppTheme.textPrimaryColor),
+        ),
+        backgroundColor: AppTheme.primaryColor, // Sử dụng màu từ AppTheme
         elevation: 0,
       ),
       body: Padding(
@@ -93,7 +97,7 @@ class EditCardView extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
-                        Colors.blue.shade600, // Màu đậm hơn để nổi bật
+                        AppTheme.buttonColor, // Sử dụng màu từ AppTheme
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 15),
                     shape: RoundedRectangleBorder(
@@ -122,7 +126,7 @@ class EditCardView extends StatelessWidget {
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
-          color: Colors.blue.shade700, // Màu chữ đậm hơn
+          color: AppTheme.primaryColor, // Sử dụng màu từ AppTheme
         ),
       ),
     );
@@ -137,18 +141,18 @@ class EditCardView extends StatelessWidget {
         decoration: InputDecoration(
           labelText: label,
           filled: true,
-          fillColor: Colors.grey.shade100, // Nền trắng nhạt hơn
+          fillColor: Colors.grey.shade100,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
           enabledBorder: OutlineInputBorder(
             borderSide:
-                BorderSide(color: Colors.blue.shade300), // Viền nhạt hơn
+                BorderSide(color: AppTheme.primaryLightColor), // Màu viền nhạt
             borderRadius: BorderRadius.circular(10),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
-                color: Colors.blue.shade600, width: 2), // Viền khi focus
+                color: AppTheme.primaryColor, width: 2), // Màu viền khi focus
             borderRadius: BorderRadius.circular(10),
           ),
         ),

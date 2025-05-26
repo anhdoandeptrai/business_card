@@ -8,6 +8,15 @@ class QRCodeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (qrData.isEmpty) {
+      return Center(
+        child: Text(
+          "Không có dữ liệu để tạo mã QR",
+          style: TextStyle(color: Colors.red, fontSize: 16),
+        ),
+      );
+    }
+
     return QrImageView(
       data: qrData,
       version: QrVersions.auto,

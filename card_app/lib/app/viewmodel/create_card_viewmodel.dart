@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 import '../data/models/business_card.dart';
 import 'home_viewmodel.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 class CreateCardViewModel extends GetxController {
   final HomeViewModel homeViewModel = Get.find<HomeViewModel>();
+  final ImagePicker _picker = ImagePicker();
 
   var name = ''.obs;
   var jobTitle = ''.obs;
@@ -15,6 +18,10 @@ class CreateCardViewModel extends GetxController {
   var facebook = ''.obs;
   var instagram = ''.obs;
   var youtube = ''.obs;
+  final RxString address = "".obs;
+
+  final Rx<File?> logo = Rx<File?>(null);
+  final Rx<File?> avatar = Rx<File?>(null);
 
   @override
   void onInit() {
@@ -71,5 +78,29 @@ class CreateCardViewModel extends GetxController {
     facebook.value = '';
     instagram.value = '';
     youtube.value = '';
+  }
+
+  // Phương thức để chọn logo
+  void pickLogo() async {
+    final XFile? image = await _picker.pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 80,
+    );
+
+    if (image != null) {
+      logo.value = File(image.path);
+    }
+  }
+
+  // Phương thức để chọn avatar
+  void pickAvatar() async {
+    final XFile? image = await _picker.pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 80,
+    );
+
+    if (image != null) {
+      avatar.value = File(image.path);
+    }
   }
 }
